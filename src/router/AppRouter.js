@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import HomePage from '../components/HomePage';
 import Gallery from '../components/Gallery';
 import NotFoundPage from '../components/NotFoundPage';
+import {AuthForm} from "../components/AuthForm";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -11,7 +12,8 @@ const AppRouter = () => (
       <Header />
       <div className="main-content">
         <Routes>
-          <Route element={HomePage} path="/" />
+          <Route path="/" element={<AuthForm />} />
+          <Route element={HomePage} path="/home" />
           <Route element={Gallery} path="/gallery" />
           <Route element={NotFoundPage} />
         </Routes>
